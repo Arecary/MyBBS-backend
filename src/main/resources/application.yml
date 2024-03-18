@@ -31,8 +31,8 @@ mybatis:
 cloud:
   aws:
     credentials:
-      access-key: AKIAR2JHRNT5KJNYDWU7
-      secret-key: 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
+      access-key: ${AWS_ACCESS_KEY_ID}
+      secret-key: ${AWS_SECRET_ACCESS_KEY}
     region:
       static: us-east-1
     stack:
