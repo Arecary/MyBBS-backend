@@ -1,0 +1,55 @@
+#server:
+#  port: 9090
+
+# database setting
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root   #database username
+#    password: ZS19960203ryf #database password
+#    url: jdbc:mysql://localhost:3306/mybbs?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+
+    username: djff4uqzdfdethj3   #database username
+    password: bbcgq3r8w20e9aiq #database password
+    url: jdbc:mysql://djff4uqzdfdethj3:bbcgq3r8w20e9aiq@w1h4cr5sb73o944p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ohn269tw9accbewb
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+# 配置mybatis实体和xml映射
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+
+# AWS S3
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAR2JHRNT5KJNYDWU7
+      secret-key: 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
+    region:
+      static: us-east-1
+    stack:
+      auto: false
+
+
+application:
+  bucket:
+    name: shi1stbuckt
+
+
+
+# 分页
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+#ip: localhost
