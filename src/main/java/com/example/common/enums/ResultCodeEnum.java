@@ -12,8 +12,8 @@ public enum ResultCodeEnum {
     USER_EXIST_ERROR("5001", "Username already exists"),
     USER_NOT_LOGIN("5002", "用户未登录"),
     USER_ACCOUNT_ERROR("5003", "Incorrect username or password"),
-    USER_NOT_EXIST_ERROR("5004", "用户不存在"),
-    PARAM_PASSWORD_ERROR("5005", "原密码输入错误"),
+    USER_NOT_EXIST_ERROR("5004", "User does not exist"),
+    PARAM_PASSWORD_ERROR("5005", "Old password wrong"),
     ;
 
     public String code;
